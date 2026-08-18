@@ -1,36 +1,178 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NETCONTROL 12 BTPI</title>
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NETCONTROL 12 BTPI</title>
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#07111f;color:#edf7ff}button,input,select{font:inherit}button{cursor:pointer}.app{display:flex;min-height:100vh}.side{width:230px;background:#06101b;border-right:1px solid #21405a;padding:20px}.logo{font-size:22px;font-weight:900}.logo i{color:#24d9ff;font-style:normal}.nav{margin-top:25px;display:grid;gap:7px}.nav button{padding:11px;text-align:left;background:#0b1b2c;border:1px solid #17364f;color:#bcd0df;border-radius:8px}.nav button:hover,.nav button.on{border-color:#24d9ff;color:white;background:#102a40}.main{flex:1;padding:24px;max-width:1400px;margin:auto;width:100%}.top{display:flex;justify-content:space-between;gap:15px;align-items:center}.top h1{margin:0}.muted{color:#8fa8bc;font-size:13px}.btn{background:#10263b;color:#fff;border:1px solid #24465e;padding:10px 13px;border-radius:8px}.primary{background:#087eae;border-color:#19bfe9}.danger{background:#4b1822;border-color:#8b3140}.success{background:#0c3a2a;border-color:#197452}.view{display:none;margin-top:20px}.view.on{display:block}.hero,.card{background:linear-gradient(145deg,#0d1c2e,#091522);border:1px solid #1d3c55;border-radius:14px;padding:20px}.hero h2{font-size:40px;margin:0}.cyan{color:#24d9ff}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:15px}.metric{font-size:30px;font-weight:900}.devices{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}.device{padding:14px;border:1px solid #1d3c55;border-radius:10px;background:#0a1928}.row{display:flex;justify-content:space-between;gap:8px}.status{padding:4px 7px;border-radius:20px;font-size:11px;font-weight:bold}.ok{background:#0c3526;color:#2de38b}.bad{background:#3b1720;color:#ff5c6c}.warn{background:#3a2e12;color:#ffc857}.cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}.form{display:grid;gap:10px}input,select,textarea{padding:10px;background:#071522;color:white;border:1px solid #25445c;border-radius:8px;width:100%}.result{margin-top:12px;padding:14px;background:#071522;border:1px solid #203e55;border-radius:9px}.steps{display:flex;gap:7px;flex-wrap:wrap;margin:12px 0}.step{background:#0b1c2c;border:1px solid #23435b;color:#bdd2e1;padding:8px;border-radius:8px}.topology{height:390px;position:relative;background:radial-gradient(circle,#113552,#07111f 70%);border:1px solid #24465e;border-radius:12px;margin-top:12px}.node{position:absolute;background:#0d2033;border:1px solid #2b5977;padding:12px;border-radius:10px;text-align:center;min-width:135px}.router{top:30px;left:calc(50% - 68px);border-color:#24d9ff}.server{top:140px;left:10%}.switch{top:140px;left:calc(50% - 68px)}.lab{bottom:30px;left:5%}.dir{bottom:30px;left:32%}.bib{bottom:30px;left:58%}.aula{bottom:30px;right:5%;border-color:#ff4d5f}.line{position:absolute;height:2px;background:#24d9ff;transform-origin:left center}.l1{width:40%;left:30%;top:95px;transform:rotate(15deg)}.l2{width:40%;left:30%;top:95px;transform:rotate(90deg)}.l3{width:40%;left:30%;top:95px;transform:rotate(165deg)}.l4{width:30%;left:50%;top:205px;transform:rotate(155deg)}.l5{width:25%;left:50%;top:205px;transform:rotate(125deg)}.l6{width:25%;left:50%;top:205px;transform:rotate(55deg)}.l7{width:30%;left:50%;top:205px;transform:rotate(25deg);background:#ff4d5f}.table{width:100%;border-collapse:collapse}.table th,.table td{padding:9px;border-bottom:1px solid #1b374d;text-align:left}.score{font-size:45px;color:#24d9ff;font-weight:900}@media(max-width:900px){.side{width:190px}.grid,.devices{grid-template-columns:1fr 1fr}.cols{grid-template-columns:1fr}}@media(max-width:650px){.app{display:block}.side{width:100%}.grid,.devices{grid-template-columns:1fr}.top{display:block}.topology{height:600px}}
-</style></head><body><div class="app"><aside class="side"><div class="logo">NET<i>CONTROL</i></div><div class="muted">12 BTPI · REDES</div><nav class="nav">
-<button data-v="inicio" class="on">⌂ Inicio</button><button data-v="dashboard">◉ Monitoreo</button><button data-v="topologia">⌁ Topología</button><button data-v="diagnostico">⚙ Diagnóstico</button><button data-v="ip"># Direccionamiento IP</button><button data-v="soporte">▣ Soporte</button><button data-v="evaluacion">✓ Evaluación</button><button data-v="expo">★ Modo Expo</button><button data-v="como">? Cómo funciona</button></nav></aside>
-<main class="main"><div class="top"><div><h1 id="title">NETCONTROL 12 BTPI</h1><div class="muted">Centro de Monitoreo y Diagnóstico · Instituto Dr. Ramón Rosa · Tocoa, Colón</div></div><button class="btn primary" onclick="go('expo')">★ Modo Expo</button></div>
-<section id="inicio" class="view on"><div class="hero"><h2>NET<span class="cyan">CONTROL</span></h2><p>Simulador educativo de redes para la Expo Feria. Practica monitoreo, diagnóstico, direccionamiento IP y soporte técnico.</p><button class="btn primary" onclick="go('expo')">Iniciar demostración</button></div><div class="grid"><div class="card"><div class="muted">Dispositivos</div><div class="metric">7</div></div><div class="card"><div class="muted">Online</div><div class="metric" id="mOnline">5/7</div></div><div class="card"><div class="muted">Fallas</div><div class="metric" id="mFault">2</div></div><div class="card"><div class="muted">Resultados</div><div class="metric" id="mRes">1</div></div></div></section>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#07111f;color:#edf7ff}
+button,input,select,textarea{font:inherit}button{cursor:pointer}
+.app{display:flex;min-height:100vh}.side{width:235px;background:#06101b;border-right:1px solid #21405a;padding:20px}
+.logo{font-size:23px;font-weight:900}.logo i{color:#24d9ff;font-style:normal}.nav{margin-top:25px;display:grid;gap:7px}
+.nav button{padding:11px;text-align:left;background:#0b1b2c;border:1px solid #17364f;color:#bcd0df;border-radius:8px}
+.nav button:hover,.nav button.on{border-color:#24d9ff;color:white;background:#102a40}
+.main{flex:1;padding:24px;max-width:1400px;margin:auto;width:100%}.top{display:flex;justify-content:space-between;gap:15px;align-items:center}.top h1{margin:0}
+.muted{color:#8fa8bc;font-size:13px}.btn{background:#10263b;color:#fff;border:1px solid #24465e;padding:10px 13px;border-radius:8px}
+.primary{background:#087eae;border-color:#19bfe9}.danger{background:#4b1822;border-color:#8b3140}.success{background:#0c3a2a;border-color:#197452}
+.view{display:none;margin-top:20px}.view.on{display:block}.hero,.card{background:linear-gradient(145deg,#0d1c2e,#091522);border:1px solid #1d3c55;border-radius:14px;padding:20px}
+.hero h2{font-size:40px;margin:0}.cyan{color:#24d9ff}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:15px}
+.metric{font-size:30px;font-weight:900}.devices{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+.device{padding:14px;border:1px solid #1d3c55;border-radius:10px;background:#0a1928}.row{display:flex;justify-content:space-between;gap:8px}
+.status{padding:4px 7px;border-radius:20px;font-size:11px;font-weight:bold}.ok{background:#0c3526;color:#2de38b}.bad{background:#3b1720;color:#ff5c6c}.warn{background:#3a2e12;color:#ffc857}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}.form{display:grid;gap:10px}
+input,select,textarea{padding:11px;background:#071522;color:white;border:1px solid #25445c;border-radius:8px;width:100%}textarea{min-height:90px;resize:vertical}
+.result{margin-top:12px;padding:14px;background:#071522;border:1px solid #203e55;border-radius:9px}.steps{display:flex;gap:7px;flex-wrap:wrap;margin:12px 0}
+.step{background:#0b1c2c;border:1px solid #23435b;color:#bdd2e1;padding:8px;border-radius:8px}
+.table{width:100%;border-collapse:collapse}.table th,.table td{padding:9px;border-bottom:1px solid #1b374d;text-align:left}.score{font-size:45px;color:#24d9ff;font-weight:900}
+.progress{height:10px;background:#0b1b2b;border-radius:20px;overflow:hidden;margin:12px 0}.progress i{display:block;height:100%;background:#24d9ff;width:0}
+.answers{display:grid;gap:10px;margin-top:15px}.answer{text-align:left;padding:13px;border-radius:9px;background:#0b1c2c;color:white;border:1px solid #24465e}
+.answer:hover{border-color:#24d9ff}.answer.correct{border-color:#2de38b;background:#0c3526}.answer.wrong{border-color:#ff5c6c;background:#3b1720}
+.badge{display:inline-block;padding:5px 9px;border-radius:20px;background:#102a40;color:#24d9ff;font-size:12px;font-weight:bold}
+.notice{padding:12px;border:1px solid #24506c;background:#0a1b2c;border-radius:9px;margin-bottom:12px}
+.topology{height:390px;position:relative;background:radial-gradient(circle,#113552,#07111f 70%);border:1px solid #24465e;border-radius:12px;margin-top:12px}
+.node{position:absolute;background:#0d2033;border:1px solid #2b5977;padding:12px;border-radius:10px;text-align:center;min-width:135px}
+.router{top:30px;left:calc(50% - 68px);border-color:#24d9ff}.server{top:140px;left:10%}.switch{top:140px;left:calc(50% - 68px)}
+.lab{bottom:30px;left:5%}.dir{bottom:30px;left:32%}.bib{bottom:30px;left:58%}.aula{bottom:30px;right:5%;border-color:#ff4d5f}
+.line{position:absolute;height:2px;background:#24d9ff;transform-origin:left center}.l1{width:40%;left:30%;top:95px;transform:rotate(15deg)}
+.l2{width:40%;left:30%;top:95px;transform:rotate(90deg)}.l3{width:40%;left:30%;top:95px;transform:rotate(165deg)}
+.l4{width:30%;left:50%;top:205px;transform:rotate(155deg)}.l5{width:25%;left:50%;top:205px;transform:rotate(125deg)}
+.l6{width:25%;left:50%;top:205px;transform:rotate(55deg)}.l7{width:30%;left:50%;top:205px;transform:rotate(25deg);background:#ff4d5f}
+@media(max-width:900px){.side{width:190px}.grid,.devices{grid-template-columns:1fr 1fr}.cols{grid-template-columns:1fr}}
+@media(max-width:650px){.app{display:block}.side{width:100%}.grid,.devices{grid-template-columns:1fr}.top{display:block}.topology{height:600px}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="side"><div class="logo">NET<i>CONTROL</i></div><div class="muted">12 BTPI · REDES</div>
+<nav class="nav">
+<button data-v="inicio" class="on">⌂ Inicio</button><button data-v="dashboard">◉ Monitoreo</button><button data-v="topologia">⌁ Topología</button>
+<button data-v="diagnostico">⚙ Diagnóstico</button><button data-v="ip"># Direccionamiento IP</button><button data-v="soporte">▣ Soporte</button>
+<button data-v="evaluacion">✓ Evaluación</button><button data-v="expo">★ Modo Expo</button><button data-v="como">? Cómo funciona</button>
+</nav></aside>
+<main class="main">
+<div class="top"><div><h1 id="title">NETCONTROL 12 BTPI</h1><div class="muted">Centro de Monitoreo y Diagnóstico · Instituto Dr. Ramón Rosa · Tocoa, Colón</div></div>
+<button class="btn primary" onclick="go('expo')">★ Modo Expo</button></div>
+
+<section id="inicio" class="view on"><div class="hero"><h2>NET<span class="cyan">CONTROL</span></h2>
+<p>Simulador educativo de redes para la Expo Feria. Practica monitoreo, diagnóstico, direccionamiento IP, soporte técnico y evaluación.</p>
+<button class="btn primary" onclick="go('expo')">Iniciar demostración</button></div>
+<div class="grid"><div class="card"><div class="muted">Dispositivos</div><div class="metric">7</div></div>
+<div class="card"><div class="muted">Online</div><div class="metric" id="mOnline">5/7</div></div>
+<div class="card"><div class="muted">Fallas</div><div class="metric" id="mFault">2</div></div>
+<div class="card"><div class="muted">Evaluaciones</div><div class="metric" id="mRes">0</div></div></div></section>
+
 <section id="dashboard" class="view"><div class="card"><h2>Monitoreo de red</h2><div class="devices" id="devs"></div></div></section>
-<section id="topologia" class="view"><div class="card"><h2>Topología de red</h2><div class="topology"><div class="line l1"></div><div class="line l2"></div><div class="line l3"></div><div class="line l4"></div><div class="line l5"></div><div class="line l6"></div><div class="line l7"></div><div class="node router"><b>ROUTER</b><small>192.168.10.1</small></div><div class="node server"><b>SERVIDOR</b><small>192.168.10.10</small></div><div class="node switch"><b>SWITCH</b><small>192.168.10.2</small></div><div class="node lab"><b>LABORATORIO</b><small>192.168.10.20</small></div><div class="node dir"><b>DIRECCIÓN</b><small>192.168.10.30</small></div><div class="node bib"><b>BIBLIOTECA</b><small>192.168.10.40</small></div><div class="node aula"><b>AULA 3</b><small>FALLA</small></div></div></div></section>
-<section id="diagnostico" class="view"><div class="cols"><div class="card"><h2>Diagnóstico guiado</h2><select id="dsel"></select><div class="steps" id="steps"></div><div class="result" id="dres">Ejecuta una prueba.</div></div><div class="card"><h2>Falla simulada</h2><select id="fsel"><option value="CABLE">Cable desconectado</option><option value="IP">IP duplicada</option><option value="GATEWAY">Gateway incorrecto</option><option value="DNS">DNS sin respuesta</option></select><button class="btn danger" style="margin-top:10px" onclick="fault()">Aplicar falla</button><button class="btn success" style="margin-top:10px" onclick="repair()">Restaurar</button></div></div></section>
-<section id="ip" class="view"><div class="cols"><div class="card"><h2>Calculadora IPv4</h2><div class="form"><input id="ip" value="192.168.10.50"><input id="cidr" value="24"><button class="btn primary" onclick="calc()">Calcular</button></div><div class="result" id="ipres"></div></div><div class="card"><h2>Conceptos</h2><p>Calcula red, broadcast, rango y hosts utilizables.</p></div></div></section>
-<section id="soporte" class="view"><div class="cols"><div class="card"><h2>Registrar incidencia</h2><div class="form"><input id="incdev" placeholder="Equipo"><input id="incuser" placeholder="Reportado por"><textarea id="incdesc" placeholder="Problema"></textarea><select id="incpri"><option>Baja</option><option selected>Media</option><option>Alta</option></select><button class="btn primary" onclick="inc()">Guardar</button></div></div><div class="card"><h2>Incidencias</h2><div id="incs"></div></div></div></section>
-<section id="evaluacion" class="view"><div class="cols"><div class="card"><h2>Evaluación</h2><div class="form"><input id="student" placeholder="Nombre del estudiante"><select id="question"><option value="0">Aula sin red: ¿qué revisas primero?</option><option value="1">No navega pero tiene IP: ¿qué revisas?</option></select><button class="btn primary" onclick="evalStart()">Comenzar reto</button></div><div class="result" id="evalbox"></div></div><div class="card"><h2>Resultados</h2><div id="results"></div></div></div></section>
-<section id="expo" class="view"><div class="cols"><div class="card"><h2>★ Modo Expo Feria</h2><p class="muted">Demostración para el jurado.</p><select id="expof"><option value="Aula 3">Aula 3 · Cable desconectado</option><option value="Laboratorio">Laboratorio · IP duplicada</option><option value="Dirección">Dirección · Gateway incorrecto</option></select><button class="btn danger" style="margin-top:10px" onclick="expoFault()">Simular falla</button><div id="expoState" class="metric" style="margin-top:20px">🟢 RED OPERATIVA</div><div id="expoMsg" class="result">Selecciona una falla y comienza la demostración.</div></div><div class="card"><h2>Guion del alumno</h2><ol><li>Identificar equipo.</li><li>Explicar síntomas.</li><li>Ejecutar diagnóstico.</li><li>Encontrar causa.</li><li>Aplicar solución.</li><li>Verificar servicio.</li></ol><button class="btn success" onclick="expoRepair()">✓ Restaurar red</button></div></div></section>
-<section id="como" class="view"><div class="card"><h2>Cómo funciona</h2><p>NETCONTROL es una <b>simulación educativa</b>. No monitorea equipos reales. Guarda datos en el navegador para que la demostración pueda funcionar sin Internet.</p></div></section>
-<div class="muted" style="text-align:center;margin-top:20px">NETCONTROL 12 BTPI · Proyecto Expo Feria · Área de Redes</div></main></div>
+
+<section id="topologia" class="view"><div class="card"><h2>Topología de red</h2><div class="topology">
+<div class="line l1"></div><div class="line l2"></div><div class="line l3"></div><div class="line l4"></div><div class="line l5"></div><div class="line l6"></div><div class="line l7"></div>
+<div class="node router"><b>ROUTER</b><br><small>192.168.10.1</small></div><div class="node server"><b>SERVIDOR</b><br><small>192.168.10.10</small></div>
+<div class="node switch"><b>SWITCH</b><br><small>192.168.10.2</small></div><div class="node lab"><b>LABORATORIO</b><br><small>192.168.10.20</small></div>
+<div class="node dir"><b>DIRECCIÓN</b><br><small>192.168.10.30</small></div><div class="node bib"><b>BIBLIOTECA</b><br><small>192.168.10.40</small></div>
+<div class="node aula"><b>AULA 3</b><br><small>FALLA</small></div></div></div></section>
+
+<section id="diagnostico" class="view"><div class="cols"><div class="card"><h2>Diagnóstico guiado</h2><select id="dsel"></select><div class="steps" id="steps"></div><div class="result" id="dres">Ejecuta una prueba.</div></div>
+<div class="card"><h2>Falla simulada</h2><select id="fsel"><option value="CABLE">Cable desconectado</option><option value="IP">IP duplicada</option><option value="GATEWAY">Gateway incorrecto</option><option value="DNS">DNS sin respuesta</option></select>
+<button class="btn danger" style="margin-top:10px" onclick="fault()">Aplicar falla</button><button class="btn success" style="margin-top:10px" onclick="repair()">Restaurar</button></div></div></section>
+
+<section id="ip" class="view"><div class="cols"><div class="card"><h2>Calculadora IPv4</h2><div class="form"><input id="ip" value="192.168.10.50"><input id="cidr" value="24"><button class="btn primary" onclick="calc()">Calcular</button></div><div class="result" id="ipres"></div></div>
+<div class="card"><h2>Conceptos</h2><p>Calcula red, broadcast, máscara, rango y hosts utilizables.</p></div></div></section>
+
+<section id="soporte" class="view"><div class="cols"><div class="card"><h2>Registrar incidencia</h2><div class="form"><input id="incdev" placeholder="Equipo"><input id="incuser" placeholder="Reportado por"><textarea id="incdesc" placeholder="Problema"></textarea>
+<select id="incpri"><option>Baja</option><option selected>Media</option><option>Alta</option></select><button class="btn primary" onclick="inc()">Guardar</button></div></div><div class="card"><h2>Incidencias</h2><div id="incs"></div></div></div></section>
+
+<section id="evaluacion" class="view">
+<div class="notice"><b>Evaluación práctica de Redes</b><br>El alumno registra su nombre, responde la evaluación y recibe una calificación sobre 100. <b>Nueva evaluación</b> permite pasar al siguiente alumno sin borrar los resultados anteriores.</div>
+<div class="cols">
+<div class="card">
+<div style="display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap"><h2>Evaluación</h2><span class="badge" id="evalStatus">Lista</span></div>
+<div id="evalStartPanel" class="form"><input id="student" placeholder="Nombre completo del estudiante">
+<select id="evalMode"><option value="normal">Evaluación completa · 10 preguntas</option><option value="expo">Reto rápido Expo · 5 preguntas</option></select>
+<button class="btn primary" onclick="startEvaluation()">▶ Iniciar evaluación</button></div>
+<div id="quizPanel" style="display:none"><div class="muted" id="quizStudent"></div><div class="progress"><i id="progressBar"></i></div>
+<div style="display:flex;justify-content:space-between"><span id="questionCounter"></span><span id="timer">⏱ 00:00</span></div>
+<h3 id="questionText"></h3><div class="answers" id="answers"></div>
+<button class="btn primary" id="nextBtn" onclick="nextQuestion()" style="display:none;margin-top:14px">Siguiente →</button></div>
+<div id="evalResult" class="result" style="display:none"></div>
+<button class="btn success" id="newEvalBtn" onclick="newEvaluation()" style="display:none;margin-top:12px">＋ Nueva evaluación</button>
+</div>
+<div class="card"><h2>Resultados</h2><div id="results"></div><button class="btn danger" style="margin-top:12px" onclick="clearResults()">Borrar resultados</button></div>
+</div></section>
+
+<section id="expo" class="view"><div class="cols"><div class="card"><h2>★ Modo Expo Feria</h2><p class="muted">Demostración para el jurado.</p>
+<select id="expof"><option value="Aula 3">Aula 3 · Cable desconectado</option><option value="Laboratorio">Laboratorio · IP duplicada</option><option value="Dirección">Dirección · Gateway incorrecto</option></select>
+<button class="btn danger" style="margin-top:10px" onclick="expoFault()">Simular falla</button><div id="expoState" class="metric" style="margin-top:20px">🟢 RED OPERATIVA</div>
+<div id="expoMsg" class="result">Selecciona una falla y comienza la demostración.</div></div><div class="card"><h2>Guion del alumno</h2><ol><li>Identificar equipo.</li><li>Explicar síntomas.</li><li>Ejecutar diagnóstico.</li><li>Encontrar causa.</li><li>Aplicar solución.</li><li>Verificar servicio.</li></ol><button class="btn success" onclick="expoRepair()">✓ Restaurar red</button></div></div></section>
+
+<section id="como" class="view"><div class="card"><h2>Cómo funciona</h2><p>NETCONTROL es una <b>simulación educativa</b>. No monitorea equipos reales. Los resultados se guardan localmente en el navegador.</p></div></section>
+<div class="muted" style="text-align:center;margin-top:20px">NETCONTROL 12 BTPI · Proyecto Expo Feria · Área de Redes</div>
+</main></div>
+
 <script>
-const KEY='NC12FINAL';let S=JSON.parse(localStorage.getItem(KEY)||'null')||{dev:[['Router Principal','192.168.10.1','ONLINE',''],['Servidor','192.168.10.10','ONLINE',''],['Switch Laboratorio','192.168.10.2','ONLINE',''],['Laboratorio','192.168.10.20','ONLINE',''],['Dirección','192.168.10.30','ALERTA','ENLACE'],['Biblioteca','192.168.10.40','ONLINE',''],['Aula 3','192.168.10.50','OFFLINE','CABLE']],inc:[],res:[]};
+const KEY='NC12FINAL_V3';
+let S=JSON.parse(localStorage.getItem(KEY)||'null')||{dev:[['Router Principal','192.168.10.1','ONLINE',''],['Servidor','192.168.10.10','ONLINE',''],['Switch Laboratorio','192.168.10.2','ONLINE',''],['Laboratorio','192.168.10.20','ONLINE',''],['Dirección','192.168.10.30','ALERTA','ENLACE'],['Biblioteca','192.168.10.40','ONLINE',''],['Aula 3','192.168.10.50','OFFLINE','CABLE']],inc:[],res:[]};
+let quiz={questions:[],index:0,score:0,student:'',mode:'normal',locked:false,start:0,timer:null};
+
+const bank=[
+['Un aula no tiene conexión. ¿Qué debes revisar primero?',['Cableado y enlace físico','DNS','Servidor web','Nombre del equipo'],0],
+['¿Cuál es la dirección de loopback IPv4?',['192.168.1.1','127.0.0.1','10.0.0.1','255.255.255.0'],1],
+['¿Qué dispositivo conecta diferentes redes?',['Switch','Router','Patch panel','Monitor'],1],
+['¿Qué función cumple el gateway predeterminado?',['Conectar con otras redes','Asignar nombres de usuario','Guardar archivos','Medir velocidad del monitor'],0],
+['¿Qué protocolo asigna automáticamente direcciones IP?',['FTP','DHCP','HTTP','SSH'],1],
+['Una PC tiene IP pero no navega. ¿Qué revisarías después?',['Gateway y DNS','Teclado','Monitor','Impresora'],0],
+['¿Qué máscara corresponde normalmente a /24?',['255.0.0.0','255.255.0.0','255.255.255.0','255.255.255.255'],2],
+['¿Qué dispositivo trabaja principalmente en la LAN para conectar equipos?',['Switch','Router de Internet','UPS','Proyector'],0],
+['¿Qué comando se utiliza habitualmente para comprobar conectividad?',['ping','format','mkdir','print'],0],
+['¿Qué significa una IP duplicada?',['Dos equipos usan la misma IP','No existe DNS','El cable está roto','El monitor está apagado'],0]
+];
+
 function save(){localStorage.setItem(KEY,JSON.stringify(S));render()}
 function go(id){document.querySelectorAll('.view').forEach(x=>x.classList.remove('on'));document.getElementById(id).classList.add('on');document.querySelectorAll('.nav button').forEach(x=>x.classList.toggle('on',x.dataset.v===id));document.getElementById('title').textContent={inicio:'NETCONTROL 12 BTPI',dashboard:'Monitoreo de red',topologia:'Topología de red',diagnostico:'Diagnóstico',ip:'Direccionamiento IP',soporte:'Soporte técnico',evaluacion:'Evaluación',expo:'Modo Expo Feria',como:'Cómo funciona'}[id]}
 document.querySelectorAll('.nav button').forEach(x=>x.onclick=()=>go(x.dataset.v));
 function st(s){return `<span class="status ${s==='ONLINE'?'ok':s==='OFFLINE'?'bad':'warn'}">${s}</span>`}
-function render(){document.getElementById('devs').innerHTML=S.dev.map((d,i)=>`<div class="device"><div class="row"><b>${d[0]}</b>${st(d[2])}</div><div class="muted">${d[1]} · ${d[3]||'sin falla'}</div></div>`).join('');document.getElementById('mOnline').textContent=S.dev.filter(d=>d[2]==='ONLINE').length+'/7';document.getElementById('mFault').textContent=S.dev.filter(d=>d[3]).length;document.getElementById('mRes').textContent=S.res.length;document.getElementById('dsel').innerHTML=S.dev.map((d,i)=>`<option value="${i}">${d[0]}</option>`).join('');document.getElementById('incs').innerHTML=S.inc.length?'<table class="table"><tr><th>Equipo</th><th>Problema</th><th>Prioridad</th></tr>'+S.inc.map(x=>`<tr><td>${x.d}</td><td>${x.x}</td><td>${x.p}</td></tr>`).join('')+'</table>':'<span class="muted">Sin incidencias.</span>';document.getElementById('results').innerHTML=S.res.length?'<table class="table"><tr><th>Alumno</th><th>Puntaje</th></tr>'+S.res.map(x=>`<tr><td>${x.n}</td><td>${x.s}%</td></tr>`).join('')+'</table>':'<span class="muted">Aún no hay resultados.</span>'}
+function render(){
+document.getElementById('devs').innerHTML=S.dev.map(d=>`<div class="device"><div class="row"><b>${d[0]}</b>${st(d[2])}</div><div class="muted">${d[1]} · ${d[3]||'sin falla'}</div></div>`).join('');
+document.getElementById('mOnline').textContent=S.dev.filter(d=>d[2]==='ONLINE').length+'/7';
+document.getElementById('mFault').textContent=S.dev.filter(d=>d[3]).length;document.getElementById('mRes').textContent=S.res.length;
+document.getElementById('dsel').innerHTML=S.dev.map((d,i)=>`<option value="${i}">${d[0]}</option>`).join('');
+document.getElementById('incs').innerHTML=S.inc.length?'<table class="table"><tr><th>Equipo</th><th>Problema</th><th>Prioridad</th></tr>'+S.inc.map(x=>`<tr><td>${x.d}</td><td>${x.x}</td><td>${x.p}</td></tr>`).join('')+'</table>':'<span class="muted">Sin incidencias.</span>';
+document.getElementById('results').innerHTML=S.res.length?'<table class="table"><tr><th>Alumno</th><th>Nota</th><th>Correctas</th><th>Nivel</th><th>Tiempo</th><th>Fecha</th></tr>'+S.res.map(x=>`<tr><td>${x.n}</td><td><b>${x.s}%</b></td><td>${x.c}/${x.t}</td><td>${x.l}</td><td>${x.time}s</td><td>${x.date}</td></tr>`).join('')+'</table>':'<span class="muted">Aún no hay resultados.</span>'
+}
 function diag(){let i=+document.getElementById('dsel').value,d=S.dev[i],names=['Conexión física','Configuración IP','Gateway','DNS','Enlace'];document.getElementById('steps').innerHTML=names.map((n,k)=>`<button class="step" onclick="step(${k})">${k+1}. ${n}</button>`).join('');document.getElementById('dres').innerHTML=`${d[0]} · ${st(d[2])}<br>Falla: ${d[3]||'ninguna'}`}
-function step(k){let d=S.dev[+document.getElementById('dsel').value],map={CABLE:0,IP:1,GATEWAY:2,DNS:3,ENLACE:4},fail=map[d[3]];document.getElementById('dres').innerHTML=fail===k?`🔴 <b>FALLA DETECTADA</b><br>Se encontró el problema en <b>${['Conexión física','IP','Gateway','DNS','Enlace'][k]}</b>.`:`🟢 <b>PRUEBA SUPERADA</b><br>Esta etapa funciona correctamente.`}
+function step(k){let d=S.dev[+document.getElementById('dsel').value],map={CABLE:0,IP:1,GATEWAY:2,DNS:3,ENLACE:4},fail=map[d[3]];document.getElementById('dres').innerHTML=fail===k?`🔴 <b>FALLA DETECTADA</b><br>Problema localizado en <b>${['Conexión física','IP','Gateway','DNS','Enlace'][k]}</b>.`:`🟢 <b>PRUEBA SUPERADA</b><br>Esta etapa funciona correctamente.`}
 document.getElementById('dsel').onchange=diag;
-function fault(){let i=+document.getElementById('dsel').value,f=document.getElementById('fsel').value;S.dev[i][3]=f;S.dev[i][2]=f==='ENLACE'?'ALERTA':'OFFLINE';save();diag()}
+function fault(){let i=+document.getElementById('dsel').value,f=document.getElementById('fsel').value;S.dev[i][3]=f;S.dev[i][2]='OFFLINE';save();diag()}
 function repair(){let i=+document.getElementById('dsel').value;S.dev[i][3]='';S.dev[i][2]='ONLINE';save();diag()}
 function calc(){let ip=document.getElementById('ip').value.split('.').map(Number),c=+document.getElementById('cidr').value;if(ip.length!==4||c<0||c>32||ip.some(x=>x<0||x>255)){ipres.innerHTML='🔴 IP/CIDR inválidos';return}let n=((ip[0]<<24)|(ip[1]<<16)|(ip[2]<<8)|ip[3])>>>0,mask=c?((0xffffffff<<(32-c))>>>0):0,net=(n&mask)>>>0,bc=(net|(~mask>>>0))>>>0,f=x=>[(x>>>24)&255,(x>>>16)&255,(x>>>8)&255,x&255].join('.');ipres.innerHTML=`Red: <b>${f(net)}</b><br>Broadcast: <b>${f(bc)}</b><br>Máscara: ${f(mask)} /${c}<br>Hosts: ${c>=31?0:2**(32-c)-2}<br>Rango: ${c>=31?'N/A':f(net+1)+' — '+f(bc-1)}`}
 function inc(){let d=incdev.value.trim()||'Sin equipo',x=incdesc.value.trim()||'Sin descripción';S.inc.unshift({d,x,p:incpri.value});save();incdev.value=incdesc.value=incuser.value=''}
-function evalStart(){let n=student.value.trim();if(!n)return alert('Escribe el nombre del estudiante.');let q=+question.value;evalbox.innerHTML=`<p><b>${q===0?'No hay red en un aula. ¿Qué revisas primero?':'Tiene IP pero no navega. ¿Qué revisas?'}</b></p><button class="btn" onclick="finish(${q},0,'${n.replaceAll("'",'')}')">${q===0?'Cable y enlace':'Gateway'}</button> <button class="btn" onclick="finish(${q},1,'${n.replaceAll("'",'')}')">${q===0?'DNS':'Monitor'}</button>`}
-function finish(q,a,n){let ok=a===0;S.res.unshift({n,s:ok?100:40});save();evalbox.innerHTML=`<div class="score">${ok?100:40}%</div>${ok?'¡Diagnóstico correcto!':'Buen intento. Revisa las capas de diagnóstico.'}`}
+function startEvaluation(){
+let n=document.getElementById('student').value.trim();if(!n){alert('Escribe el nombre completo del estudiante.');return}
+quiz.student=n;quiz.mode=document.getElementById('evalMode').value;quiz.questions=quiz.mode==='expo'?bank.slice(0,5):bank.slice();quiz.index=0;quiz.score=0;quiz.locked=false;quiz.start=Date.now();
+clearInterval(quiz.timer);quiz.timer=setInterval(updateTimer,1000);
+document.getElementById('evalStartPanel').style.display='none';document.getElementById('evalResult').style.display='none';document.getElementById('newEvalBtn').style.display='none';document.getElementById('quizPanel').style.display='block';document.getElementById('evalStatus').textContent='En curso';document.getElementById('quizStudent').textContent='Alumno: '+quiz.student;showQuestion()
+}
+function updateTimer(){let s=Math.floor((Date.now()-quiz.start)/1000),m=Math.floor(s/60),r=s%60;document.getElementById('timer').textContent='⏱ '+String(m).padStart(2,'0')+':'+String(r).padStart(2,'0')}
+function showQuestion(){
+let q=quiz.questions[quiz.index];document.getElementById('questionCounter').textContent=`Pregunta ${quiz.index+1} de ${quiz.questions.length}`;document.getElementById('progressBar').style.width=((quiz.index)/quiz.questions.length*100)+'%';document.getElementById('questionText').textContent=q[0];
+document.getElementById('answers').innerHTML=q[1].map((a,i)=>`<button class="answer" onclick="answer(${i})">${String.fromCharCode(65+i)}. ${a}</button>`).join('');
+document.getElementById('nextBtn').style.display='none';quiz.locked=false
+}
+function answer(i){
+if(quiz.locked)return;quiz.locked=true;let q=quiz.questions[quiz.index],bs=document.querySelectorAll('.answer');bs.forEach((b,k)=>{if(k===q[2])b.classList.add('correct');if(k===i&&i!==q[2])b.classList.add('wrong');b.disabled=true});if(i===q[2])quiz.score++;document.getElementById('nextBtn').style.display='inline-block';document.getElementById('nextBtn').textContent=quiz.index===quiz.questions.length-1?'Ver resultado':'Siguiente →'
+}
+function nextQuestion(){quiz.index++;if(quiz.index>=quiz.questions.length){finishEvaluation();return}showQuestion()}
+function finishEvaluation(){
+clearInterval(quiz.timer);let total=quiz.questions.length,score=Math.round(quiz.score/total*100),seconds=Math.round((Date.now()-quiz.start)/1000);
+let level=score>=90?'Excelente':score>=80?'Muy bueno':score>=70?'Bueno':score>=60?'En proceso':'Necesita reforzar';
+S.res.unshift({n:quiz.student,s:score,c:quiz.score,t:total,l:level,time:seconds,date:new Date().toLocaleDateString('es-HN')});save();
+document.getElementById('quizPanel').style.display='none';document.getElementById('evalStatus').textContent='Finalizada';document.getElementById('evalResult').style.display='block';
+document.getElementById('evalResult').innerHTML=`<div class="score">${score}%</div><h3>${level}</h3><p><b>${quiz.student}</b></p><p>✅ ${quiz.score} de ${total} respuestas correctas</p><p>⏱ Tiempo: ${seconds} segundos</p><p>La evaluación quedó registrada en la tabla de resultados.</p>`;
+document.getElementById('newEvalBtn').style.display='inline-block';document.getElementById('progressBar').style.width='100%';render()
+}
+function newEvaluation(){clearInterval(quiz.timer);document.getElementById('student').value='';document.getElementById('evalMode').value='normal';document.getElementById('evalStartPanel').style.display='grid';document.getElementById('quizPanel').style.display='none';document.getElementById('evalResult').style.display='none';document.getElementById('newEvalBtn').style.display='none';document.getElementById('evalStatus').textContent='Lista';window.scrollTo({top:0,behavior:'smooth'})}
+function clearResults(){if(confirm('¿Borrar todos los resultados de evaluación de este navegador?')){S.res=[];save()}}
 function expoFault(){let name=document.getElementById('expof').value,i=S.dev.findIndex(x=>x[0]===name);S.dev[i][3]=name==='Aula 3'?'CABLE':name==='Laboratorio'?'IP':'GATEWAY';S.dev[i][2]='OFFLINE';save();document.getElementById('expoState').textContent='🔴 FALLA DETECTADA';document.getElementById('expoMsg').innerHTML=`<b>${name}</b> presenta una falla simulada.<br>El alumno debe ir a Diagnóstico y resolverla.`}
 function expoRepair(){let name=document.getElementById('expof').value,i=S.dev.findIndex(x=>x[0]===name);S.dev[i][3]='';S.dev[i][2]='ONLINE';save();document.getElementById('expoState').textContent='🟢 RED OPERATIVA';document.getElementById('expoMsg').textContent='Servicio restaurado y verificado.'}
 render();diag();calc();
-</script></body></html>
+</script>
+</body>
+</html>
